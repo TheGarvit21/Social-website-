@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <h1 class="text-center text-3xl font-bold my-6">Images you familiar to)</h1>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 p-4">
+    <!-- Loop through images array and display each image -->
+    <% images.forEach(function(imageUrl) { %>
+      <div class="relative">
+        <img src="<%= imageUrl %>" alt="Random Image" class="w-full h-auto rounded-lg shadow-lg object-cover">
+      </div>
+    <% }); %>
+  </div>
+
+</body>
+</html>

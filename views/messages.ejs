@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="https://www.w3schools.com/w3images/rocks.jpg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-blue-500">
+        <h1 class="text-xl font-bold text-blue-500">Socially</h1>
+      </a>
+      <ul class="flex space-x-6 items-center">
+        <li><a href="/" class="hover:text-blue-500">Home</a></li>
+        <li><a href="/images" class="hover:text-blue-500">Images</a></li>
+        <li><a href="/messages" class="hover:text-blue-500">Messages</a></li>
+        <li><a href="/login" class="hover:text-blue-500">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-6">
+    <h2 class="text-2xl font-semibold mb-4">Messages</h2>
+
+    <!-- Messages List -->
+    <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+      <h3 class="text-xl font-semibold mb-2">Inbox</h3>
+
+      <!-- Example message -->
+      <div class="flex items-center justify-between border-b pb-3 mb-3">
+        <div>
+          <p class="font-semibold">John Doe</p>
+          <p class="text-sm text-gray-500">2 hours ago</p>
+        </div>
+        <p class="text-gray-700">Hey, are you available for a chat?</p>
+      </div>
+
+      <!-- Another message -->
+      <div class="flex items-center justify-between border-b pb-3 mb-3">
+        <div>
+          <p class="font-semibold">Jane Smith</p>
+          <p class="text-sm text-gray-500">4 hours ago</p>
+        </div>
+        <p class="text-gray-700">Can you send me the report?</p>
+      </div>
+
+      <!-- Add more messages as needed -->
+    </div>
+
+    <!-- New Message Form -->
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-4">Send New Message</h3>
+
+      <form action="/messages" method="POST">
+        <div class="mb-4">
+          <label for="recipient" class="block text-sm font-medium text-gray-700">Recipient</label>
+          <input type="text" id="recipient" name="recipient" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+        </div>
+
+        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

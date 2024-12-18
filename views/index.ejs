@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2">
+        <!-- Circular Logo -->
+        <img src="https://www.w3schools.com/w3images/rocks.jpg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-blue-500">
+        <h1 class="text-xl font-bold text-blue-500">Social</h1>
+      </a>
+      
+      <!-- Menu for Large Screens -->
+      <ul id="navbar" class="hidden md:flex space-x-6 items-center">
+        <li><a href="/" class="hover:text-blue-500">Home</a></li>
+        <li><a href="/images" class="hover:text-blue-500">Images</a></li>
+        <li><a href="/messages" class="hover:text-blue-500">Messages</a></li>
+        <li><a href="/login" class="hover:text-blue-500">Login</a></li>
+      </ul>
+
+      <!-- Hamburger Menu for Small Screens -->
+      <div class="md:hidden">
+        <button class="text-blue-500 focus:outline-none" id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Stories Section -->
+  <div class="w-full overflow-x-auto py-4 bg-white border-b">
+    <div class="flex items-center gap-4 px-4">
+      <!-- User Stories -->
+      <div class="flex items-center space-x-4">
+        <div class="w-16 h-16 rounded-full bg-gray-300">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User" class="w-full h-full rounded-full object-cover">
+        </div>
+        <div class="w-16 h-16 rounded-full bg-gray-300">
+          <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="User" class="w-full h-full rounded-full object-cover">
+        </div>
+        <div class="w-16 h-16 rounded-full bg-gray-300">
+          <img src="https://randomuser.me/api/portraits/men/78.jpg" alt="User" class="w-full h-full rounded-full object-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mx-auto mt-6 px-4 flex flex-col md:flex-row gap-6">
+
+    <!-- Feed Section -->
+    <div class="w-full md:w-8/12">
+      <!-- Post 1 -->
+      <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-10 h-10 rounded-full">
+          <div>
+            <p class="font-semibold text-sm">John Doe</p>
+            <p class="text-xs text-gray-500">2 hours ago</p>
+          </div>
+        </div>
+        <img src="https://picsum.photos/500/300" alt="Post Image" class="w-full h-auto mb-4 rounded-md">
+        <div class="flex justify-between items-center mb-4">
+          <div class="flex items-center space-x-4">
+            <button class="text-red-500 hover:text-red-600 like-btn" onclick="toggleLike(this)"><i class="fas fa-heart"></i> Like</button>
+            <button class="text-gray-500 hover:text-gray-600"><i class="fas fa-comment"></i> Comment</button>
+          </div>
+          <button class="text-blue-500 hover:text-blue-600">Share</button>
+        </div>
+        <p class="font-semibold text-sm">100 Likes</p>
+        <p class="text-gray-600 text-sm mt-2">Beautiful scenery in the mountains!</p>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="User" class="w-10 h-10 rounded-full">
+          <div>
+            <p class="font-semibold text-sm">Jane Smith</p>
+            <p class="text-xs text-gray-500">4 hours ago</p>
+          </div>
+        </div>
+        <img src="https://picsum.photos/500/300?random=1" alt="Post Image" class="w-full h-auto mb-4 rounded-md">
+        <div class="flex justify-between items-center mb-4">
+          <div class="flex items-center space-x-4">
+            <button class="text-red-500 hover:text-red-600 like-btn" onclick="toggleLike(this)"><i class="fas fa-heart"></i> Like</button>
+            <button class="text-gray-500 hover:text-gray-600"><i class="fas fa-comment"></i> Comment</button>
+          </div>
+          <button class="text-blue-500 hover:text-blue-600">Share</button>
+        </div>
+        <p class="font-semibold text-sm">250 Likes</p>
+        <p class="text-gray-600 text-sm mt-2">At the beach during sunset!</p>
+      </div>
+
+      <!-- Post 3 -->
+      <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="https://randomuser.me/api/portraits/men/78.jpg" alt="User" class="w-10 h-10 rounded-full">
+          <div>
+            <p class="font-semibold text-sm">Mark Lee</p>
+            <p class="text-xs text-gray-500">6 hours ago</p>
+          </div>
+        </div>
+        <img src="https://picsum.photos/500/300?random=2" alt="Post Image" class="w-full h-auto mb-4 rounded-md">
+        <div class="flex justify-between items-center mb-4">
+          <div class="flex items-center space-x-4">
+            <button class="text-red-500 hover:text-red-600 like-btn" onclick="toggleLike(this)"><i class="fas fa-heart"></i> Like</button>
+            <button class="text-gray-500 hover:text-gray-600"><i class="fas fa-comment"></i> Comment</button>
+          </div>
+          <button class="text-blue-500 hover:text-blue-600">Share</button>
+        </div>
+        <p class="font-semibold text-sm">300 Likes</p>
+        <p class="text-gray-600 text-sm mt-2">Amazing adventure in the wild!</p>
+      </div>
+    </div>
+
+    <!-- Sidebar Section -->
+    <div class="w-full md:w-4/12">
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <h2 class="font-semibold text-lg mb-4">Trending</h2>
+        <ul>
+          <li><a href="#" class="text-blue-500 hover:text-blue-600">#MountainAdventure</a></li>
+          <li><a href="#" class="text-blue-500 hover:text-blue-600">#BeachVibes</a></li>
+          <li><a href="#" class="text-blue-500 hover:text-blue-600">#SunsetLovers</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to toggle the like button state
+    function toggleLike(button) {
+      if (button.classList.contains('text-red-500')) {
+        button.classList.remove('text-red-500');
+        button.classList.add('text-gray-500');
+      } else {
+        button.classList.remove('text-gray-500');
+        button.classList.add('text-red-500');
+      }
+    }
+
+    // Toggle Navbar visibility on small screens
+    const menuBtn = document.getElementById('menu-btn');
+    const navbar = document.getElementById('navbar');
+
+    menuBtn.addEventListener('click', () => {
+      navbar.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
